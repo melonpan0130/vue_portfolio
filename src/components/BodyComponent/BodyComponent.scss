@@ -1,0 +1,48 @@
+@import '../../global.scss';
+
+.body-component {
+  border: solid 1px red;
+  flex-grow: 1;
+  display: flex;
+  align-items: stretch;
+  flex-direction: row;
+
+  & .navigation {
+    width: 25%;
+
+    & ul {
+      position: sticky;
+      top: 50%;
+      left: min(5%, 100px);
+      width: min(25%, 500px);
+      margin: 10px;
+      transform: translateY(-50%);
+      background-color: green;
+      list-style-type: circle;
+      font-size: 25px;
+      line-height: 1.5em;
+
+      & li:hover {
+        list-style-type: disc;
+        // add .selected status
+      }
+    }
+  }
+
+  & .content {
+    width: 75%;
+
+    // TEST
+    background-color: green;
+    & p {
+      // display: none;
+      font-size: 30px;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .body-component li {
+    font-size: 20px;
+  }
+}

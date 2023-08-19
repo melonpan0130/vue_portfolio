@@ -1,0 +1,26 @@
+@import '../../global.scss';
+
+.header-component {
+  display: table;
+  width: 100%;
+  height: 100px;
+  flex-shrink: 0;
+}
+.header-component > div {
+  display: table-cell;
+  vertical-align: middle;
+}
+.header-component * {
+  text-align: center;
+}
+.header-component .title {
+  font-weight: $font_weight_100;
+  font-size: 32px;
+}
+.header-component .title b {
+  font-weight: $font_weight_900;
+}
+.header-component .subscription {
+  font-weight: $font_weight_800;
+  font-size: 25px;
+}
