@@ -11,19 +11,18 @@
     width: 25%;
 
     ul {
-      background-color: green; // TEST
       position: sticky;
       top: 50%;
       left: min(5%, 100px);
       width: min(25%, 500px);
       margin: 10px;
       transform: translateY(-50%);
-      list-style-type: circle;
-      font-size: 25px;
+      list-style-type: none;
       line-height: 1.5em;
+      font-size: 20px;
 
       li:hover {
-        list-style-type: disc;
+        @include highlight_text_navy;
         // add .selected status
       }
     }

@@ -6,13 +6,24 @@
   margin: 10px;
   margin-bottom: 50px;
 
-  &::before {
+  &:before {
     content: '';
     @include background_gradation_navy;
-    width: 8px;
+    width: 5px;
     height: 100%;
     position: absolute;
     top: 0;
     left: 0;
+  }
+
+  .title:hover:before {
+    content: '#';
+    position: absolute;
+    left: 10px;
+    top: -7px;
+    font-size: 25px;
+    opacity: 0.7;
+    font-weight: $font_weight_900;
+    @include highlight_text_navy;
   }
 }

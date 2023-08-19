@@ -20,13 +20,13 @@
 
     b {
       font-weight: $font_weight_900;
-      @include highlight_text_box;
+      @include highlight_text_box_red;
     }
   }
 
   .subscription {
     font-weight: $font_weight_900;
     font-size: 25px;
-    @include highlight_text;
+    @include highlight_text_red;
   }
 }

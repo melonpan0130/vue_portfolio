@@ -15,5 +15,6 @@ module.exports = {
     'vue/max-attributes-per-line': 0,
     'vue/html-self-closing': 0,
     'vue/require-prop-types': 0,
+    'vue/valid-v-for': 0,
   },
 };

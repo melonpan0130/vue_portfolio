@@ -36,13 +36,25 @@ $font_weight_900: 900; // Black
   background: linear-gradient(45deg, $base_color_navy, $base_color_teal);
 }
 
-@mixin highlight_text {
-  background: linear-gradient(to right top, #ef6262, #f3aa60);
+@mixin highlight_text($color1, $color2) {
+  background: linear-gradient(to right top, $color1, $color2);
   color: transparent;
   -webkit-background-clip: text;
 }
 
-@mixin highlight_text_box {
-  background: linear-gradient(to right bottom, #f3aa60, #ef6262);
+@mixin highlight_text_red {
+  @include highlight_text($base_color_red, $base_color_orange);
+}
+
+@mixin highlight_text_navy {
+  @include highlight_text($base_color_navy, $base_color_teal);
+}
+
+@mixin highlight_text_box_red {
+  background: linear-gradient(
+    to right bottom,
+    $base_color_orange,
+    $base_color_red
+  );
   color: white;
 }
