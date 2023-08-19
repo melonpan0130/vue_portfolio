@@ -7,42 +7,42 @@
   align-items: stretch;
   flex-direction: row;
 
-  & .navigation {
+  .navigation {
     width: 25%;
 
-    & ul {
+    ul {
+      background-color: green; // TEST
       position: sticky;
       top: 50%;
       left: min(5%, 100px);
       width: min(25%, 500px);
       margin: 10px;
       transform: translateY(-50%);
-      background-color: green;
       list-style-type: circle;
       font-size: 25px;
       line-height: 1.5em;
 
-      & li:hover {
+      li:hover {
         list-style-type: disc;
         // add .selected status
       }
     }
   }
 
-  & .content {
-    width: 75%;
-
-    // TEST
-    background-color: green;
-    & p {
-      // display: none;
-      font-size: 30px;
-    }
+  .content {
+    width: 50%;
   }
 }
 
 @media screen and (max-width: 768px) {
   .body-component li {
     font-size: 20px;
+  }
+}
+
+@media screen and (max-height: 450px) {
+  .body-component .navigation ul {
+    top: 50px;
+    transform: unset;
   }
 }

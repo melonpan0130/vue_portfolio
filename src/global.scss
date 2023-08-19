@@ -15,6 +15,12 @@ body,
   height: 100%;
 }
 
+// base color
+$base_color_navy: #1d5b79;
+$base_color_teal: #24b5bf;
+$base_color_red: #ef6262;
+$base_color_orange: #f8cc6d;
+
 // font-weight
 $font_weight_100: 100; // Thin
 $font_weight_200: 200; // Extra Light
@@ -25,3 +31,18 @@ $font_weight_600: 600; // SemiBold
 $font_weight_700: 700; // Bold
 $font_weight_800: 800; // ExtraBold
 $font_weight_900: 900; // Black
+
+@mixin background_gradation_navy {
+  background: linear-gradient(45deg, $base_color_navy, $base_color_teal);
+}
+
+@mixin highlight_text {
+  background: linear-gradient(to right top, #ef6262, #f3aa60);
+  color: transparent;
+  -webkit-background-clip: text;
+}
+
+@mixin highlight_text_box {
+  background: linear-gradient(to right bottom, #f3aa60, #ef6262);
+  color: white;
+}

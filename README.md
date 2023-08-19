@@ -1,10 +1,12 @@
 # cej_portfolio
 
+Portfolio Website made with Vue.js
+
 > A Vue.js project
 
 ## Build Setup
 
-``` bash
+```bash
 # install dependencies
 npm install
 

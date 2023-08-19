@@ -1,0 +1,18 @@
+@import '../../global.scss';
+
+.section-component {
+  position: relative;
+  padding-left: 30px;
+  margin: 10px;
+  margin-bottom: 50px;
+
+  &::before {
+    content: '';
+    @include background_gradation_navy;
+    width: 8px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
