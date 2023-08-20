@@ -7,20 +7,97 @@
   flex-direction: row;
 
   .period {
-    width: min(20%, 150px);
-    font-size: 18px;
     font-weight: $font_weight_300;
     padding-top: 7px;
 
     .period-start::after {
       content: '~';
+      margin-left: 5px;
+    }
+    .period-string {
+      font-weight: $font_weight_600;
+      color: $base_color_gray;
     }
   }
+
+  & > .period {
+    width: min(20%, 150px);
+    font-size: 18px;
+  }
+
   .content {
     width: 80%;
 
-    .name {
+    & > .name {
       margin-bottom: 5px;
+    }
+
+    .project {
+      margin-top: 20px;
+
+      .title {
+        * {
+          display: inline-block;
+        }
+
+        .topic {
+          padding: 2px;
+          margin-right: 2px;
+          background-color: $base_color_navy;
+          color: white;
+        }
+
+        .name {
+          font-size: 25px;
+          font-weight: $font_weight_600;
+          display: inline-block;
+        }
+      }
+
+      .period {
+        font-size: 16px;
+        color: $base_color_gray;
+
+        .period-start,
+        .period-end {
+          display: inline-block;
+        }
+      }
+
+      .position,
+      .techStack > div {
+        font-size: 20px;
+        font-weight: $font_weight_600;
+        margin-top: 17px;
+        margin-bottom: 7px;
+      }
+
+      .description {
+        font-size: 18px;
+        margin: 5px 0;
+      }
+
+      .detail,
+      .techStack ul {
+        font-size: 18px;
+        padding-left: 25px;
+
+        b {
+          @include highlight_text_box_red;
+          padding: 2px 0;
+        }
+      }
+
+      .techStack ul li {
+        .name::after {
+          content: ':';
+          margin-right: 5px;
+        }
+        .item:not(:last-of-type)::after {
+          content: ',';
+          margin-right: 5px;
+        }
+      }
     }
   }
 }

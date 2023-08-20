@@ -16,5 +16,6 @@ module.exports = {
     'vue/html-self-closing': 0,
     'vue/require-prop-types': 0,
     'vue/valid-v-for': 0,
+    'vue/require-v-for-key': 0,
   },
 };

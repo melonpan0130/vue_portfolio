@@ -16,6 +16,8 @@
 import SectionComponent from '@/components/SectionComponent/SectionComponent'
 
 var displayTextInfo = require('../../common/DisplayText');
+
+console.log(displayTextInfo);
 export default {
   components: {
     'section-component': SectionComponent
