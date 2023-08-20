@@ -2,12 +2,15 @@
   <div class="body-component">
     <div class="navigation">
       <ul>
-        <li v-for="displayText in displayTextInfo" :key="displayText.sectionName">{{ displayText.sectionName }}</li>
+        <li v-for="(displayText, index) in displayTextInfo" :key="index">
+          <a :href="'#section_' + index">{{ displayText.sectionName }}</a>
+        </li>
       </ul>
     </div>
     <div class="content">
-      <section-component v-for="displayText in displayTextInfo" :key="displayText.sectionName"
-        :display-text="displayText"></section-component>
+      <section-component v-for="(displayText, index) in displayTextInfo" :key="index" :display-text="displayText"
+        :navigation="'section_' + index">
+      </section-component>
     </div>
   </div>
 </template>

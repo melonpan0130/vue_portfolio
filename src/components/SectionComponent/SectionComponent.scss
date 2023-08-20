@@ -16,14 +16,13 @@
     left: 0;
   }
 
-  .title:hover:before {
+  & > .title:hover:before {
     content: '#';
     position: absolute;
-    left: 10px;
-    top: -7px;
+    left: 12px;
     font-size: 25px;
     opacity: 0.7;
-    font-weight: $font_weight_900;
+    font-weight: $font_weight_600;
     @include highlight_text_navy;
   }
 }
