@@ -81,5 +81,19 @@
     "> 1%",
     "last 2 versions",
     "not ie <= 8"
-  ]
+  ],
+  "main": ".eslintrc.js",
+  "directories": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/melonpan0130/vue_portfolio.git"
+  },
+  "keywords": [],
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/melonpan0130/vue_portfolio/issues"
+  },
+  "homepage": "https://github.com/melonpan0130/vue_portfolio#readme"
 }
