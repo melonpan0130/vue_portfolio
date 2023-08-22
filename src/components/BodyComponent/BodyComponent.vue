@@ -18,7 +18,7 @@
 <script>
 import SectionComponent from '@/components/SectionComponent/SectionComponent'
 
-var displayTextInfo = require('../../common/DisplayText');
+var displayTextInfo = require('../../common/displayText');
 
 console.log(displayTextInfo);
 export default {
