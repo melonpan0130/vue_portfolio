@@ -10,7 +10,7 @@ module.exports = [
         description: ['소프트웨어 개발자'],
         projects: [
           {
-            topic: '교통', // TODO
+            topic: '교통',
             name: 'JR(Japan Rail) 예약시스템 웹 개발 프로젝트',
             periodStart: '2023.07',
             periodEnd: '현재',
@@ -30,7 +30,7 @@ module.exports = [
             images: [],
           },
           {
-            topic: '교통', // TODO
+            topic: '교통',
             name: 'JR(Japan Rail) WEB 화면 작성 툴 프로젝트',
             periodStart: '2022.08',
             periodEnd: '2023.06',
@@ -68,7 +68,7 @@ module.exports = [
             images: [],
           },
           {
-            topic: '교통', // TODO
+            topic: '교통',
             name: 'Hitachi Global Package Develop (Tranista2.0-Adapter)',
             periodStart: '2021.11',
             periodEnd: '2022.07',
@@ -103,7 +103,7 @@ module.exports = [
             images: [],
           },
           {
-            topic: '금융', // TODO
+            topic: '금융',
             name: '삼성카드 FDS 고도화 프로젝트',
             periodStart: '2021.04',
             periodEnd: '2021.10',
@@ -143,7 +143,7 @@ module.exports = [
             images: [],
           },
           {
-            topic: '공공', // TODO
+            topic: '공공',
             name: '도쿄 전력 시스템 개발 프로젝트',
             periodStart: '2020.11',
             periodEnd: '2021.03',
@@ -165,7 +165,7 @@ module.exports = [
             images: [],
           },
           {
-            topic: '교통', // TODO
+            topic: '교통',
             name: 'JR(Japan Rail) 철도시스템 개발 프로젝트',
             periodStart: '2020.11',
             periodEnd: '2021.03',

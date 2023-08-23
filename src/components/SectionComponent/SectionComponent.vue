@@ -1,18 +1,19 @@
 <template>
   <div class="section-component">
     <a :name="navigation"></a>
-    <h3 class="title">{{ displayText.sectionName }}</h3>
-    <article-component v-for="(item, index) in displayText.article" :key="index" :article="item"></article-component>
+    <h3 class="title">{{ resumeText.sectionName }}</h3>
+    <article-component v-for="(item, index) in resumeText.article" :key="index" :article="item"></article-component>
   </div>
 </template>
 
 <script>
 import ArticleComponent from '@/components/ArticleComponent/ArticleComponent';
+
 export default {
   components: {
     'article-component': ArticleComponent
   },
-  props: ['displayText', 'navigation'],
+  props: ['resumeText', 'navigation'],
 }
 </script>
 

@@ -15,7 +15,7 @@
             <div class="name" v-html="project.name"></div>
           </div>
           <div class="period">
-            <dis class="period-start">{{ project.periodStart }}</dis>
+            <div class="period-start">{{ project.periodStart }}</div>
             <div class="period-end">{{ project.periodEnd }}</div>
           </div>
           <div class="position">{{ project.position }}</div>
