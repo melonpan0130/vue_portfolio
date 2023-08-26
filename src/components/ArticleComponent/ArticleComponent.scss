@@ -43,6 +43,7 @@
         .topic {
           padding: 2px;
           margin-right: 2px;
+          margin-bottom: 2px;
           background-color: $base_color_navy;
           color: white;
         }
@@ -72,8 +73,8 @@
         margin-bottom: 7px;
       }
 
-      .position::before {
-        content: '역할';
+      .position > p {
+        display: inline;
         margin-right: 5px;
         font-weight: $font_weight_300;
       }

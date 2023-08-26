@@ -18,7 +18,9 @@
             <div class="period-start">{{ project.periodStart }}</div>
             <div class="period-end">{{ project.periodEnd }}</div>
           </div>
-          <div class="position">{{ project.position }}</div>
+          <div class="position">
+            <p>{{ positionText }}</p>{{ project.position }}
+          </div>
           <div v-for="description in project.description" class="description">{{ description }}</div>
           <ul v-if="project.detail" class="detail">
             <li v-for="item in project.detail" v-html="item"></li>
@@ -42,8 +44,15 @@
 </template>
 
 <script>
+var commonTextInfo = require('../../common/commonText');
+
 export default {
-  props: ['article']
+  props: ['article'],
+  data() {
+    return {
+      positionText: commonTextInfo.article.positionText
+    };
+  }
 }
 </script>
 
