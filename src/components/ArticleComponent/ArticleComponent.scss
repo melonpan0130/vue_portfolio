@@ -72,6 +72,12 @@
         margin-bottom: 7px;
       }
 
+      .position::before {
+        content: '역할';
+        margin-right: 5px;
+        font-weight: $font_weight_300;
+      }
+
       .description {
         font-size: 18px;
         margin: 5px 0;
@@ -96,6 +102,53 @@
         .item:not(:last-of-type)::after {
           content: ',';
           margin-right: 5px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 769px) {
+}
+
+@media screen and (max-width: 768px) {
+  .article-component {
+    margin-top: 10px;
+    flex-direction: column;
+
+    & > .period {
+      // background-color: yellow;
+      width: 100%;
+
+      div {
+        font-size: 0.75em;
+        display: inline-block;
+      }
+
+      .period-string {
+        &::before {
+          content: '(';
+        }
+        &::after {
+          content: ')';
+        }
+      }
+    }
+
+    & > .content {
+      width: 100%;
+      & * {
+        font-size: $mobile_font_size3 !important;
+      }
+
+      & > .name {
+        font-size: $mobile_font_size2 !important;
+      }
+      .project {
+        & > .title {
+          .name {
+            font-size: $mobile_font_size3 !important;
+          }
         }
       }
     }

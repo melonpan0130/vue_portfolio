@@ -5,8 +5,10 @@
   padding-left: 30px;
   margin: 10px;
   margin-bottom: 50px;
+}
 
-  &:before {
+@media screen and (min-width: 769px) {
+  .section-component::before {
     content: '';
     @include background_gradation_navy;
     width: 5px;
@@ -15,14 +17,17 @@
     top: 0;
     left: 0;
   }
+}
 
-  & > .title:hover:before {
-    content: '#';
-    position: absolute;
-    left: 12px;
-    font-size: 25px;
-    opacity: 0.7;
-    font-weight: $font_weight_600;
-    @include highlight_text_navy;
+@media screen and (max-width: 768px) {
+  .section-component {
+    margin: 0;
+    padding: 0;
+    padding: 20px;
+    margin-bottom: 30px;
+
+    & > .title {
+      font-size: $mobile_font_size1;
+    }
   }
 }

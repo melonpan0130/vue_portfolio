@@ -52,6 +52,8 @@
       ul {
         position: relative;
         top: unset;
+        left: unset;
+        margin-left: 20px;
         transform: none;
         font-size: 14px;
         line-height: 1.7em;
@@ -65,7 +67,7 @@
     }
 
     .content {
-      width: 70%;
+      width: 100%;
     }
   }
 }
