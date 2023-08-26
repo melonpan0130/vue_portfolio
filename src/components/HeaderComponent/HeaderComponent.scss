@@ -18,7 +18,7 @@
 
   .title {
     font-weight: $font_weight_100;
-    font-size: 32px;
+    font-size: 30px;
 
     b {
       font-weight: $font_weight_900;
@@ -27,8 +27,21 @@
   }
 
   .subscription {
-    font-weight: $font_weight_900;
     font-size: 25px;
-    @include highlight_text_red;
+    b {
+      font-weight: $font_weight_900;
+      @include highlight_text_red;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .header-component {
+    .title {
+      font-size: 20px;
+    }
+    .subscription {
+      font-size: 16px;
+    }
   }
 }

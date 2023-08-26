@@ -1,8 +1,8 @@
 <template>
   <div class="header-component">
     <div>
-      <h1 class="title" v-html="title"></h1>
-      <h1 class="subscription">{{ subscription }}</h1>
+      <p class="subscription" v-html="subscription"></p>
+      <p class="title" v-html="title"></p>
     </div>
   </div>
 </template>
@@ -12,8 +12,8 @@ export default {
   data() {
     return {
       // TODO set language
-      title: '안녕하세요, <b>정은주</b> 입니다.',
-      subscription: '백엔드 개발자'
+      subscription: '안녕하세요, <b>백엔드 개발자</b>',
+      title: '<b>정은주</b> 입니다.',
     }
   }
 }
