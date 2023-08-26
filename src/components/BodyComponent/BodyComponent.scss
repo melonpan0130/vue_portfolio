@@ -5,6 +5,7 @@
   display: flex;
   align-items: stretch;
   flex-direction: row;
+  flex-wrap: wrap;
   padding: 50px 0;
 
   .navigation {
@@ -24,20 +25,10 @@
       a {
         color: black;
         text-decoration: none;
-        &:hover
-        // ,
-        // &.selected:nth-child(1)
-        {
+        &:hover,
+        &.selected {
           @include highlight_text_navy;
-          // add .selected status
         }
-        // &:active {
-        //   background-color: yellow;
-        // }
-      }
-
-      a.selected:first-of-type {
-        @include highlight_text_navy;
       }
     }
   }
@@ -48,8 +39,21 @@
 }
 
 @media screen and (max-width: 768px) {
-  .body-component li {
-    font-size: 20px;
+  .body-component {
+    padding: 20px 0;
+    .navigation {
+      width: 100%;
+
+      ul {
+        position: relative;
+        top: unset;
+        transform: none;
+        font-size: 14px;
+      }
+    }
+    .content {
+      width: 70%;
+    }
   }
 }
 

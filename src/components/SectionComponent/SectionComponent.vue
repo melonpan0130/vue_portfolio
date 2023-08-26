@@ -1,7 +1,7 @@
 <template>
-  <div ref="sectionDiv" class="section-component">
+  <div ref="sectionDiv">
     <Transition>
-      <div>
+      <div class="section-component">
         <a :name="navigation"></a>
         <h3 class="title">{{ resumeText.sectionName }}</h3>
         <article-component v-for="(item, index) in resumeText.article" :key="index" :article="item"></article-component>

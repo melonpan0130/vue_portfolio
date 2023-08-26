@@ -7,7 +7,7 @@
         </li>
       </ul>
     </div>
-    <div>
+    <div class="content">
       <section-component v-for="(resumeText, index) in resumeTextInfo" :key="index" :resume-text="resumeText"
         :navigation="'section_' + index" :name="'section_' + index" @setNavigation="setNavigation">
       </section-component>
