@@ -7,9 +7,9 @@
         </li>
       </ul>
     </div>
-    <div class="content">
+    <div>
       <section-component v-for="(resumeText, index) in resumeTextInfo" :key="index" :resume-text="resumeText"
-        :navigation="'section_' + index">
+        :navigation="'section_' + index" :name="'section_' + index" @setNavigation="setNavigation">
       </section-component>
     </div>
   </div>
@@ -17,9 +17,7 @@
 
 <script>
 import SectionComponent from '@/components/SectionComponent/SectionComponent';
-import { CommonUtil } from '../../common/common.util';
 const resumeTextInfo = require('../../common/resumeText');
-const scrollTopList = [];
 
 export default {
   components: {
@@ -28,48 +26,34 @@ export default {
   data: function () {
     return {
       resumeTextInfo: resumeTextInfo,
-      // scrollTopList: []
+      navigationList: null
     };
-  }
+  },
+  mounted: function () {
+    this.navigationList = document.querySelectorAll('.navigation a');
+  },
+  methods: {
+    setNavigation: function (name, activeFlag) {
+      const anchor = document.querySelector('.navigation a[href="#' + name + '"]');
+      if (activeFlag) {
+        anchor.classList.add('active');
+      } else {
+        anchor.classList.remove('active');
+      }
+
+      // Reset 'selected'
+      this.navigationList.forEach(nav => {
+        nav.classList.remove('selected');
+      });
+
+      // Add class 'selected' to first of a.active
+      const active = document.querySelector('.navigation a.active');
+      if (active !== null) {
+        active.classList.add('selected');
+      }
+    },
+  },
 }
-
-window.addEventListener('load', () => {
-  const firstNavigation = document.querySelector('.navigation a');
-  firstNavigation.classList.add('selected');
-
-  for (let index = 0; index < resumeTextInfo.length; index++) {
-    const sectionId = 'a[name="' + CommonUtil.SECTION_NAME_PREV + index + '"]';
-    const section = document.querySelector(sectionId);
-    const viewport = section.getBoundingClientRect();
-    scrollTopList.push(viewport.top);
-  }
-});
-
-// can be component's listener?
-window.addEventListener('scroll', (e) => {
-  const current = document.querySelector('.navigation .selected');
-  if (current !== null) {
-    const href = current.href;
-    const split = href.indexOf(CommonUtil.SECTION_NAME_PREV) + CommonUtil.SECTION_NAME_PREV.length;
-    const curIndex = Number(href.substring(split));
-    const scrollTop = document.documentElement.scrollTop;
-
-    let nextIndex = curIndex;
-    if (curIndex !== 0 && scrollTop < scrollTopList[curIndex]) {
-      nextIndex--;
-    }
-    if (curIndex !== scrollTopList.length - 1 && scrollTop > scrollTopList[curIndex + 1]) {
-      nextIndex++;
-    }
-
-    if (curIndex !== nextIndex) {
-      const nextSelected = document.querySelector('.navigation li:nth-child(' + (nextIndex + 1) + ') a');
-      console.log(nextSelected);
-      nextSelected.classList.add('selected');
-      current.classList.remove('selected');
-    }
-  }
-})
 </script>
 
 <style lang="scss">

@@ -24,14 +24,20 @@
       a {
         color: black;
         text-decoration: none;
-        &:hover,
-        &.selected {
+        &:hover
+        // ,
+        // &.selected:nth-child(1)
+        {
           @include highlight_text_navy;
           // add .selected status
         }
         // &:active {
         //   background-color: yellow;
         // }
+      }
+
+      a.selected:first-of-type {
+        @include highlight_text_navy;
       }
     }
   }
