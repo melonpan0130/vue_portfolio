@@ -3,13 +3,13 @@
     <div class="navigation">
       <ul>
         <li v-for="(resumeText, index) in resumeTextInfo" :key="index">
-          <a :href="'#section_' + index">{{ resumeText.sectionName }}</a>
+          <a :href="'#' + sectionNamePrev + index">{{ resumeText.sectionName }}</a>
         </li>
       </ul>
     </div>
     <div class="content">
       <section-component v-for="(resumeText, index) in resumeTextInfo" :key="index" :resume-text="resumeText"
-        :navigation="'section_' + index" :name="'section_' + index" @setNavigation="setNavigation">
+        :navigation="sectionNamePrev + index" :name="sectionNamePrev + index" @setNavigation="setNavigation">
       </section-component>
     </div>
   </div>
@@ -17,6 +17,7 @@
 
 <script>
 import SectionComponent from '@/components/SectionComponent/SectionComponent';
+import { CommonUtil } from '../../common/common.util';
 const resumeTextInfo = require('../../common/resumeText');
 
 export default {
@@ -26,7 +27,8 @@ export default {
   data: function () {
     return {
       resumeTextInfo: resumeTextInfo,
-      navigationList: null
+      navigationList: null,
+      sectionNamePrev: CommonUtil.SECTION_NAME_PREV
     };
   },
   mounted: function () {
