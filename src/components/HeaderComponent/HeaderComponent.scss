@@ -1,47 +1,50 @@
 @import '../../global.scss';
 
 .header-component {
-  display: table;
+  display: flex;
   width: 100%;
-  height: 100px;
+  height: 200px;
   flex-shrink: 0;
-  padding: 20px 0;
-  border-bottom: solid 1px $base_color_gray;
+  padding: 40px 0;
+  border-bottom: solid 1px $base_color_navy;
 
-  * {
-    text-align: center;
-  }
   & > div {
-    display: table-cell;
-    vertical-align: middle;
+    margin: auto;
+    width: 60%;
   }
 
   .title {
     font-weight: $font_weight_100;
-    font-size: 30px;
+    font-size: 60px;
 
     b {
       font-weight: $font_weight_900;
-      @include highlight_text_box_red;
+      @include highlight_text_box_navy;
     }
   }
 
   .subscription {
-    font-size: 25px;
+    font-weight: $font_weight_100;
+    font-size: 50px;
     b {
       font-weight: $font_weight_900;
-      @include highlight_text_red;
+      color: $base_color_navy;
     }
   }
 }
 
 @media screen and (max-width: 768px) {
   .header-component {
+    height: 100px;
+
+    & > div {
+      width: 80%;
+    }
     .title {
-      font-size: $mobile_font_size1;
+      font-size: $mobile_title_font_size1;
     }
     .subscription {
-      font-size: $mobile_font_size2;
+      font-size: $mobile_title_font_size2;
     }
   }
 }

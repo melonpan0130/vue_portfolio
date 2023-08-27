@@ -17,9 +17,6 @@ body,
 
 // base color
 $base_color_navy: #1d5b79;
-$base_color_teal: #1e9ca5;
-$base_color_red: #ef6262;
-$base_color_orange: #f8cc6d;
 $base_color_gray: #8c8c8c;
 
 // font-weight
@@ -33,33 +30,14 @@ $font_weight_700: 700; // Bold
 $font_weight_800: 800; // ExtraBold
 $font_weight_900: 900; // Black
 
-@mixin background_gradation_navy {
-  background: linear-gradient(45deg, $base_color_navy, $base_color_teal);
-}
-
-@mixin highlight_text($color1, $color2) {
-  background: linear-gradient(to right top, $color1, $color2);
-  color: transparent;
-  -webkit-background-clip: text;
-}
-
-@mixin highlight_text_red {
-  @include highlight_text($base_color_red, $base_color_orange);
-}
-
-@mixin highlight_text_navy {
-  @include highlight_text($base_color_navy, $base_color_teal);
-}
-
-@mixin highlight_text_box_red {
-  background: linear-gradient(
-    to right bottom,
-    $base_color_orange,
-    $base_color_red
-  );
+@mixin highlight_text_box_navy {
+  background-color: $base_color_navy;
   color: white;
+  padding: 2px 0;
 }
 
+$mobile_title_font_size1: 40px;
+$mobile_title_font_size2: 28px;
 $mobile_font_size1: 24px;
 $mobile_font_size2: 20px;
 $mobile_font_size3: 16px;

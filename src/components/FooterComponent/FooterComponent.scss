@@ -5,10 +5,10 @@
   flex-shrink: 0;
   display: flex;
   align-items: center;
-  border-top: solid 1px $base_color_gray;
+  border-top: solid 1px $base_color_navy;
 
   span {
     margin: 0 10%;
-    color: rgba($base_color_gray, 0.5);
+    color: rgba($base_color_navy, 0.5);
   }
 }

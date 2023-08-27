@@ -8,13 +8,13 @@ export default new VueRouter({
   mode: 'history',
   routes: [
     {
-      path: '/#/:section_name',
-      redirect: '/',
-    },
-    {
       path: '/',
       name: 'Home',
       component: MainComponent,
+    },
+    {
+      path: '/#/',
+      redirect: '/',
     },
   ],
 });

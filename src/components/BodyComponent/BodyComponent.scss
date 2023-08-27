@@ -6,18 +6,16 @@
   align-items: stretch;
   flex-direction: row;
   flex-wrap: wrap;
-  padding: 50px 0;
 
   .navigation {
-    width: 30%;
+    width: 20%;
+    position: relative;
 
     ul {
       position: sticky;
-      top: 50%;
-      left: min(5%, 100px);
-      width: min(50%, 500px);
-      margin: 10px;
-      transform: translateY(-50%);
+      top: 20px;
+      margin-top: 20px;
+      margin-left: 20px;
       list-style-type: none;
       line-height: 1.5em;
       font-size: 20px;
@@ -29,8 +27,10 @@
     }
   }
 
-  .content {
-    width: 40%;
+  & > .content {
+    width: 60%;
+    border-left: solid 1px $base_color_navy;
+    border-right: solid 1px $base_color_navy;
   }
 }
 
@@ -38,7 +38,7 @@
   .body-component .navigation ul a {
     &:hover,
     &.selected {
-      @include highlight_text_navy;
+      @include highlight_text_box_navy;
     }
   }
 }
@@ -60,7 +60,7 @@
 
         a {
           &:active {
-            @include highlight_text_navy;
+            @include highlight_text_box_navy;
           }
         }
       }
@@ -68,13 +68,14 @@
 
     .content {
       width: 100%;
+      border: none;
     }
   }
 }
 
 @media screen and (max-height: 450px) {
   .body-component .navigation ul {
-    top: 50px;
     transform: unset;
+    margin-bottom: 20px;
   }
 }

@@ -2,21 +2,9 @@
 
 .section-component {
   position: relative;
-  padding-left: 30px;
+  // padding-left: 30px;
   margin: 10px;
   margin-bottom: 50px;
-}
-
-@media screen and (min-width: 769px) {
-  .section-component::before {
-    content: '';
-    @include background_gradation_navy;
-    width: 5px;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-  }
 }
 
 @media screen and (max-width: 768px) {
