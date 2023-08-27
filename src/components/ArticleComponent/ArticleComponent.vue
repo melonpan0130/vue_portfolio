@@ -1,7 +1,7 @@
 <template>
   <div class="article-component">
     <project-component v-if="article.projects" :article="article"></project-component>
-    <div v-else>
+    <div v-else class="normal">
       <div class="period">
         <div v-if="article.periodStart" class="period-start">{{ article.periodStart }}</div>
         <div class="period-end">{{ article.periodEnd }}</div>
