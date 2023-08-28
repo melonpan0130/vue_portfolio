@@ -2,6 +2,7 @@
 
 .project-component {
   margin-top: 30px;
+  margin-left: 45px;
   display: block;
 
   .period {
@@ -26,14 +27,62 @@
   }
 
   .content {
-    // width: 80%;
-
     & > .name {
       margin-bottom: 5px;
     }
 
     .project {
       margin-top: 20px;
+      border-collapse: collapse;
+
+      tr {
+        td:nth-child(1) {
+          width: 80px;
+          position: relative;
+
+          $point_size: 10px;
+          $line_width: 5px;
+
+          @mixin line_before($top) {
+            content: '';
+            background-color: $base_color_navy;
+            width: $line_width;
+            height: calc(100% + 2px);
+            position: absolute;
+            right: calc($line_width / 2);
+            top: $top;
+          }
+
+          &.period-start {
+            &::after {
+              content: '';
+              width: $point_size;
+              height: $point_size;
+              position: absolute;
+              right: calc($point_size / 2 * (-1));
+              top: calc(50% - $point_size);
+              border-radius: 50%;
+              background-color: white;
+              border: solid $line_width $base_color_navy;
+            }
+          }
+
+          &:is(tr:first-child td)::before {
+            @include line_before(50%);
+          }
+          &:not(tr:first-child td)::before {
+            @include line_before(0);
+          }
+        }
+
+        td:nth-child(2) {
+          padding-left: 10px;
+
+          &:not(.title) {
+            padding-left: 50px;
+          }
+        }
+      }
 
       .title {
         * {
@@ -112,6 +161,7 @@
 
 @media screen and (max-width: 768px) {
   .project-component {
+    margin: 0;
     margin-top: 10px;
     flex-direction: column;
 
@@ -143,9 +193,19 @@
         font-size: $mobile_font_size2 !important;
       }
       .project {
-        & > .title {
+        .title {
           .name {
             font-size: $mobile_font_size3 !important;
+          }
+        }
+
+        tr {
+          td:nth-child(2) {
+            padding-left: 10px;
+
+            &:not(.title) {
+              padding-left: 10px;
+            }
           }
         }
       }
