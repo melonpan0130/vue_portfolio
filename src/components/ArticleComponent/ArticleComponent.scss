@@ -3,6 +3,7 @@
 .article-component {
   .normal {
     margin-top: 30px;
+    margin-left: 45px;
     display: flex;
     align-items: stretch;
     flex-direction: row;
@@ -39,6 +40,7 @@
 @media screen and (max-width: 768px) {
   .article-component {
     .normal {
+      margin: 0;
       margin-top: 10px;
       flex-direction: column;
       & > .period {
