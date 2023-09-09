@@ -1,0 +1,50 @@
+@import '../../global.scss';
+
+.header-component {
+  display: flex;
+  width: 100%;
+  height: 250px;
+  flex-shrink: 0;
+  padding: 40px 0;
+  margin-bottom: 50px;
+
+  & > div {
+    margin: auto;
+    width: 50%;
+  }
+
+  .title {
+    font-weight: $font_weight_100;
+    font-size: 60px;
+
+    b {
+      font-weight: $font_weight_900;
+      @include highlight_text_box_navy;
+    }
+  }
+
+  .subscription {
+    font-weight: $font_weight_100;
+    font-size: 50px;
+    b {
+      font-weight: $font_weight_900;
+      color: $base_color_navy;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .header-component {
+    height: 100px;
+
+    & > div {
+      width: 80%;
+    }
+    .title {
+      font-size: $mobile_title_font_size1;
+    }
+    .subscription {
+      font-size: $mobile_title_font_size2;
+    }
+  }
+}

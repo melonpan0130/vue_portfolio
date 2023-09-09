@@ -8,18 +8,16 @@
 </template>
 
 <script>
-var commonTextInfo = require('../../common/commonText');
-
 export default {
   data() {
     return {
-      subscription: commonTextInfo.header.subscription,
-      title: commonTextInfo.header.title,
+      subscription: '안녕하세요, <b>백엔드 개발자</b>',
+      title: '<b>정은주</b> 입니다.',
     }
   }
 }
 </script>
 
 <style lang="scss">
-@import "HeaderComponent.scss";
+@import "IntroComponent.scss";
 </style>
