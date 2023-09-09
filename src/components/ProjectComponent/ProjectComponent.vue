@@ -40,9 +40,9 @@
                   </li>
                 </ul>
               </div>
-              <div v-if="project.images" class="images">
+              <!-- <div v-if="project.images" class="images">
                 <img>
-              </div>
+              </div> -->
             </td>
           </tr>
         </template>

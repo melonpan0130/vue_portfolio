@@ -1,8 +1,7 @@
 @import '../../global.scss';
 
 .project-component {
-  margin-top: 30px;
-  margin-left: 45px;
+  margin-top: 15px;
   display: block;
 
   .period {
@@ -40,8 +39,8 @@
           width: 80px;
           position: relative;
 
-          $point_size: 10px;
-          $line_width: 5px;
+          $point_size: 5px;
+          $line_width: 1px;
 
           @mixin line_before($top) {
             content: '';
@@ -62,7 +61,7 @@
               right: calc($point_size / 2 * (-1));
               top: calc(50% - $point_size);
               border-radius: 50%;
-              background-color: white;
+              background-color: $base_color_navy;
               border: solid $line_width $base_color_navy;
             }
           }
@@ -75,85 +74,88 @@
           }
         }
 
+        .title {
+          * {
+            display: inline-block;
+          }
+
+          .topic {
+            padding: 2px;
+            margin-right: 2px;
+            margin-bottom: 2px;
+            background-color: $base_color_navy;
+            font-weight: $font_weight_800;
+            color: white;
+          }
+
+          .name {
+            font-size: 25px;
+            font-weight: $font_weight_600;
+            display: inline-block;
+          }
+        }
+
         td:nth-child(2) {
-          padding-left: 10px;
+          padding-left: 30px;
 
           &:not(.title) {
-            padding-left: 50px;
+            padding-bottom: 30px;
+            font-size: 18px;
+
+            .period {
+              font-size: 16px;
+              color: $base_color_gray;
+
+              .period-start,
+              .period-end {
+                display: inline-block;
+              }
+            }
+
+            .position,
+            .techStack > div {
+              font-weight: $font_weight_600;
+              margin-top: 15px;
+              margin-bottom: 7px;
+            }
+
+            .position > p {
+              display: inline;
+              margin-right: 5px;
+              font-weight: $font_weight_300;
+            }
+
+            .description {
+              margin: 5px 0;
+            }
+
+            .detail,
+            .techStack ul {
+              font-size: 18px;
+              padding-left: 25px;
+
+              b {
+                @include highlight_text_box_navy;
+                padding: 2px 0;
+              }
+            }
+
+            .techStack ul li {
+              .name::after {
+                content: ':';
+                margin-right: 5px;
+              }
+              .item:not(:last-of-type)::after {
+                content: ',';
+                margin-right: 5px;
+              }
+            }
           }
         }
       }
 
-      .title {
-        * {
-          display: inline-block;
-        }
-
-        .topic {
-          padding: 2px;
-          margin-right: 2px;
-          margin-bottom: 2px;
-          background-color: $base_color_navy;
-          font-weight: $font_weight_800;
-          color: white;
-        }
-
-        .name {
-          font-size: 25px;
-          font-weight: $font_weight_600;
-          display: inline-block;
-        }
-      }
-
-      .period {
-        font-size: 16px;
-        color: $base_color_gray;
-
-        .period-start,
-        .period-end {
-          display: inline-block;
-        }
-      }
-
-      .position,
-      .techStack > div {
-        font-size: 20px;
-        font-weight: $font_weight_600;
-        margin-top: 17px;
-        margin-bottom: 7px;
-      }
-
-      .position > p {
-        display: inline;
-        margin-right: 5px;
-        font-weight: $font_weight_300;
-      }
-
-      .description {
-        font-size: 18px;
-        margin: 5px 0;
-      }
-
-      .detail,
-      .techStack ul {
-        font-size: 18px;
-        padding-left: 25px;
-
-        b {
-          @include highlight_text_box_navy;
-          padding: 2px 0;
-        }
-      }
-
-      .techStack ul li {
-        .name::after {
-          content: ':';
-          margin-right: 5px;
-        }
-        .item:not(:last-of-type)::after {
-          content: ',';
-          margin-right: 5px;
-        }
+      tr:last-of-type td:last-of-type {
+        padding-bottom: unset;
       }
     }
   }

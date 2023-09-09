@@ -3,14 +3,14 @@
 .header-component {
   display: flex;
   width: 100%;
-  height: 200px;
+  height: 250px;
   flex-shrink: 0;
   padding: 40px 0;
-  border-bottom: solid 1px $base_color_navy;
+  margin-bottom: 50px;
 
   & > div {
     margin: auto;
-    width: 60%;
+    width: 50%;
   }
 
   .title {
