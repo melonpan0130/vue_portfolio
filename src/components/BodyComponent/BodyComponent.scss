@@ -14,8 +14,10 @@
     ul {
       position: sticky;
       top: 20px;
+      right: 0;
       margin-top: 20px;
-      margin-left: 20px;
+      margin-right: 60px;
+      float: right;
       list-style-type: none;
       line-height: 1.5em;
       font-size: 20px;
@@ -53,6 +55,8 @@
         position: relative;
         top: unset;
         left: unset;
+        float: unset;
+        margin: 0;
         margin-left: 20px;
         transform: none;
         font-size: $mobile_font_size3;
