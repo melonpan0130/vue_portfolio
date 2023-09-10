@@ -1,5 +1,5 @@
 <template>
-  <div class="header-component">
+  <div class="intro-component">
     <div>
       <p class="subscription" v-html="subscription"></p>
       <p class="title" v-html="title"></p>
