@@ -55,6 +55,16 @@
   }
 }
 
+@media screen and (max-width: 1440px) {
+  .body-component .content {
+    width: 75%;
+
+    & > div {
+      border-right: none;
+    }
+  }
+}
+
 @media screen and (max-width: 768px) {
   .body-component {
     .navigation {
