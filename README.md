@@ -1,4 +1,4 @@
-# cej_portfolio
+# cej_resume
 
 Portfolio Website made with Vue.js
 
