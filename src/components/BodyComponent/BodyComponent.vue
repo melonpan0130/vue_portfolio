@@ -16,8 +16,8 @@
 </template>
 
 <script>
-import SectionComponent from '@/components/SectionComponent/SectionComponent';
 import { CommonUtil } from '@/common/common.util';
+import SectionComponent from '@/components/SectionComponent/SectionComponent';
 const resumeTextInfo = require('../../common/resumeText');
 
 export default {
