@@ -145,7 +145,7 @@ module.exports = [
             images: [],
           },
           {
-            topic: '공공',
+            topic: '전력',
             name: '도쿄 전력 시스템 개발 프로젝트',
             periodStart: '2020.11',
             periodEnd: '2021.03',

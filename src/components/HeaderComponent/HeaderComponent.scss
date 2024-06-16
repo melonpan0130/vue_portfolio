@@ -6,7 +6,6 @@
   height: 250px;
   flex-shrink: 0;
   padding: 40px 0;
-  margin-bottom: 50px;
 
   & > div {
     margin: auto;
@@ -26,6 +25,9 @@
   .subscription {
     font-weight: $font_weight_100;
     font-size: 50px;
+    display: flex;
+    flex-wrap: wrap;
+
     b {
       font-weight: $font_weight_900;
       color: $base_color_navy;
@@ -35,8 +37,6 @@
 
 @media screen and (max-width: 768px) {
   .header-component {
-    height: 100px;
-
     & > div {
       width: 80%;
     }

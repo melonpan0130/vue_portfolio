@@ -2,17 +2,17 @@
 
 .section-component {
   position: relative;
-  margin-bottom: 50px;
+  padding: 25px;
 }
 
 @media screen and (max-width: 768px) {
   .section-component {
     margin: 0;
-    padding: 0;
     padding: 20px;
-    margin-bottom: 30px;
+    padding-top: 0;
 
     & > .title {
+      padding-top: 50px;
       font-size: $mobile_font_size1;
     }
   }

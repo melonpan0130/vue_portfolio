@@ -6,6 +6,8 @@
   align-items: stretch;
   flex-direction: row;
   flex-wrap: wrap;
+  border: $border_solid_navy;
+  border-width: 1px 0;
 
   .navigation {
     width: 25%;
@@ -15,11 +17,13 @@
       position: sticky;
       top: 20px;
       right: 0;
-      margin-right: 60px;
       float: right;
       list-style-type: none;
       line-height: 1.5em;
       font-size: 20px;
+      display: inline-flex;
+      flex-direction: column;
+      margin: 25px;
 
       a {
         color: black;
@@ -30,6 +34,15 @@
 
   & > .content {
     width: 50%;
+
+    & > div {
+      border: $border_solid_navy;
+      border-bottom: none;
+
+      &:first-child {
+        border-top: none;
+      }
+    }
   }
 }
 
@@ -44,9 +57,14 @@
 
 @media screen and (max-width: 768px) {
   .body-component {
-    padding: 20px 0;
     .navigation {
+      position: sticky;
+      top: 0;
       width: 100%;
+      padding: 10px 0;
+      border-bottom: $border_solid_navy;
+      background-color: rgba($color: white, $alpha: 0.9);
+      z-index: 9999;
 
       ul {
         position: relative;
@@ -58,6 +76,13 @@
         transform: none;
         font-size: $mobile_font_size3;
         line-height: 1.7em;
+        display: flex;
+        flex-direction: row;
+
+        li {
+          display: inline-block;
+          margin-right: 10px;
+        }
 
         a {
           &:active {
@@ -70,6 +95,10 @@
     .content {
       width: 100%;
       border: none;
+
+      & > div {
+        border-width: 1px 0;
+      }
     }
   }
 }
