@@ -228,10 +228,9 @@ module.exports = [
       },
       {
         periodStart: '',
-        periodEnd: '2019.07.18',
-        name: 'OCJA',
+        periodEnd: '2019.01.18',
+        name: 'Oracle Certified Java Associate',
         description: [
-          'Oracle Certified Java Associate',
           '<b>Oracle</b>에서 발행하는 Java 프로그래밍 개발능력을 검증하는 자격증',
         ],
       },
