@@ -7,6 +7,6 @@ module.exports = {
     positionText: '역할',
   },
   footer: {
-    comment: 'This website was created using Vue.js',
+    comment: 'This website built using Vue.js',
   },
 };
