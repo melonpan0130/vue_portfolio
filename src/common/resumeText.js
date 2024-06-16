@@ -9,7 +9,7 @@ module.exports = [
         periodEnd: '현재',
         period: common.getWorkPeriod('2020.03.01'),
         name: '아이티센 재팬 (구 LG히다찌)',
-        description: ['소프트웨어 개발자'],
+        description: ['SI 개발자', '백엔드/프론트엔드 개발'],
         projects: [
           {
             topic: '교통',
