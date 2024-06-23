@@ -1,6 +1,12 @@
 <template>
   <div class="footer-component">
-    <span>{{ commonTextInfo.comment }}</span>
+    <div>
+      <span>{{ commonTextInfo.comment }}</span>
+      <div>
+        <a href="https://www.flaticon.com/free-icons/github" title="github icons">Github icons created by Pixel perfect -
+          Flaticon</a>
+      </div>
+    </div>
   </div>
 </template>
 

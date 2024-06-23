@@ -91,7 +91,7 @@ module.exports = [
             techStack: [
               {
                 name: '백엔드',
-                list: ['JAVA', 'Spring Boot', 'MyBatis', 'Apache Camel'],
+                list: ['Java', 'Spring Boot', 'MyBatis', 'Apache Camel'],
               },
               {
                 name: 'DB',
@@ -127,7 +127,7 @@ module.exports = [
               },
               {
                 name: '백엔드',
-                list: ['JAVA'],
+                list: ['Java'],
               },
               {
                 name: '통신',
@@ -157,7 +157,7 @@ module.exports = [
             techStack: [
               {
                 name: '백엔드',
-                list: ['JAVA', 'Spring', 'JUnit'],
+                list: ['Java', 'Spring', 'JUnit'],
               },
               {
                 name: 'Tool',
@@ -203,7 +203,7 @@ module.exports = [
         name: '고려사이버대학교',
         description: [
           '소프트웨어공학과 전공 <b>학사</b>',
-          '평균 4.0/4.5학점',
+          '평균 3.86/4.5학점',
           '현재 재직과 병행하며 재학 중',
         ],
       },

@@ -2,13 +2,31 @@
 
 .header-component {
   display: flex;
+  flex-direction: column;
   width: 100%;
   min-height: 250px;
   flex-shrink: 0;
-  padding: 40px 0;
 
-  & > div {
+  .information {
+    width: 50%;
+    padding: 10px 0;
     margin: auto;
+    background-color: $base_color_navy;
+    display: flex;
+    justify-content: flex-end;
+
+    .github {
+      width: 40px;
+      height: 40px;
+      margin: 0 20px;
+      display: inline-block;
+      background-image: url('../../assets/github.png');
+      background-size: cover;
+    }
+  }
+
+  .mainTitle {
+    margin: 70px auto;
     width: 50%;
   }
 
@@ -35,9 +53,28 @@
   }
 }
 
+@media screen and (max-width: 1440px) {
+  .header-component {
+    .information {
+      width: 100%;
+
+      .github {
+        width: 30px;
+        height: 30px;
+      }
+    }
+  }
+}
+
 @media screen and (max-width: 768px) {
   .header-component {
-    & > div {
+    .information {
+      .github {
+        width: 20px;
+        height: 20px;
+      }
+    }
+    .mainTitle {
       width: 80%;
     }
     .title {

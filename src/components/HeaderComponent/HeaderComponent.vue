@@ -1,6 +1,9 @@
 <template>
   <div class="header-component">
-    <div>
+    <div class="information">
+      <a class="github" href="https://github.com/melonpan0130"></a>
+    </div>
+    <div class="mainTitle">
       <p class="subscription" v-html="subscription"></p>
       <p class="title" v-html="title"></p>
     </div>
